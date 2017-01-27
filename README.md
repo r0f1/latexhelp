@@ -30,7 +30,7 @@ I greeted in section~\ref{sec:greetings}.
  
 ```latex
 \begin{filecontents}{publication.bib}
-@misc{dedupedatasets,
+@misc{caesar2017awesome,
 	title={{A}wesome {P}ublic {D}atasets},
 	author={caesar0301},
 	howpublished = {\url{https://github.com/caesar0301/awesome-public-datasets}},
