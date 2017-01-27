@@ -1,0 +1,33 @@
+\documentclass[10pt]{article}
+\usepackage[width=\textwidth, labelfont=bf]{caption}
+\usepackage{color}
+\usepackage{ctable}
+\usepackage{longtable}
+
+\begin{document}
+
+\begin{longtable}[c]{l c c}
+\caption{Age-adjusted baseline characteristics (2017), n=239.}   \\
+\specialrule{.1em}{.05em}{.05em}
+
+& \multicolumn{2}{c}{Exposure} \\ 
+\cline{2-3}
+                                 & Unexposed  & Exposed \\
+Characteristics                  & (n = 200) & (n = 39) \\
+\specialrule{.05em}{1em}{0em}
+
+Age (years)\textsuperscript{1}	 & 42.1 (5.1) & 45.3 (5.5) \\
+\specialrule{0em}{.2em}{.2em}
+Smoking status (\%)				 &    &    \\
+\hspace{1em} never smoker 		 & 39 & 50 \\
+\hspace{1em} former smoker 		 & 25 & 21 \\
+\hspace{1em} current smoker		 & 36 & 49 \\
+
+\specialrule{0em}{.2em}{.2em}
+\specialrule{.1em}{.05em}{.05em}
+
+\label{tab:baseline} \\
+\caption*{Data are mean (SD) or \%. \textsuperscript{1} Not age-adjusted.}
+\end{longtable}
+
+\end{document}

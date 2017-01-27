@@ -12,6 +12,36 @@
 \end{figure}
 ```
 
+## Lists
+
+```latex
+\usepackage[ampersand]{easylist}
+
+\begin{easylist}[itemize] % default=enumerate
+& Main item
+&& Sub item
+&& Another sub item
+\end{easylist}
+```
+[Source](https://en.wikibooks.org/wiki/LaTeX/List_Structures#Easylist_package)
+
+## Tables
+```latex
+\usepackage{longtable}
+
+\begin{longtable}[c]{l c c}
+\caption{My caption} \\
+
+bla	 & bla & bla \\
+bla  & bla & bla \\
+
+\label{tab:baseline} \\
+\caption*{The section for footnotes.}
+\end{longtable}
+```
+
+A more complicated table. 
+
 ## Referencing
 
 ```latex
