@@ -45,14 +45,12 @@ A more complicated table: [tex](https://github.com/r0f1/latexhelp/blob/master/te
 ## Referencing
 
 ```latex
+In section~\ref{sec:greetings} we will greet you!
+
 \section{Greetings}
 \label{sec:greetings}
 
 Hello!
-
-\section{Referencing}
-
-I greeted in section~\ref{sec:greetings}.
 ```
 
 ## Citing a Web Resource From Within the Document
