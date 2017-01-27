@@ -25,7 +25,7 @@ Hello!
 I greeted in section~\ref{sec:greetings}.
 ```
 
-## Citing a webresource from within the document
+## Citing a Web Resource From Within the Document
 
  
 ```latex
@@ -40,8 +40,23 @@ I greeted in section~\ref{sec:greetings}.
 
 \begin{document}
 
+There is a curated list of awesome datasets~\cite{caesar2017awesome}.
+
 \bibliographystyle{plain}
 \bibliography{publication}
 
 \end{document}
+```
+
+## Makefile
+
+```make
+.PHONY: all clean
+
+all:
+	latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make filename.tex
+	latexmk -c
+
+clean:
+	rm -f filename.bbl publication.bib
 ```
