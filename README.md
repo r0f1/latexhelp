@@ -60,3 +60,4 @@ all:
 clean:
 	rm -f filename.bbl publication.bib
 ```
+Requires [proTeXt](https://www.tug.org/protext/) and [Perl](https://www.activestate.com/activeperl/downloads).
