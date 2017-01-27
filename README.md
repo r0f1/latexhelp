@@ -40,7 +40,7 @@ bla  & bla & bla \\
 \end{longtable}
 ```
 
-A more complicated table: [tex](https://github.com/r0f1/latexhelp/blob/master/templates/table1.tex) [pdf preview](https://github.com/r0f1/latexhelp/blob/master/templates/table1.pdf). 
+A more complicated table: [tex](https://github.com/r0f1/latexhelp/blob/master/templates/table1.tex) | [pdf](https://github.com/r0f1/latexhelp/blob/master/templates/table1.pdf). 
 
 ## Referencing
 
