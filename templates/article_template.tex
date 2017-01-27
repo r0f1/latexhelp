@@ -1,0 +1,136 @@
+\documentclass[10pt]{article}
+
+% INCLUDES
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{bm}
+\usepackage{color}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{sectsty}
+\usepackage{verbatim}
+\usepackage{csquotes}
+\usepackage{longtable}
+\usepackage[width=\textwidth, labelfont=bf]{caption}
+\usepackage{ctable} % for \specialrule command
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{lscape}
+\usepackage{lineno}
+\usepackage{stackengine}
+\usepackage{scalerel}
+% \usepackage{helvet}
+
+
+% FONT SETTINGS
+
+\sectionfont{\large}
+\paragraphfont{\large}
+\subparagraphfont{\normalsize}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+% CODE LISTING SETTINGS
+
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or
+                                   % \usepackage{xcolor}
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=true,          % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={},               % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, 
+                                   % does not work with UTF-8
+  frame=none,                      % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code 
+                                   % (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=C,                      % the language of the code
+  morekeywords={},                 % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left,
+                                   % right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks 
+                                   % within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; 
+                                   % it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be
+                                   % numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; 
+                                   % also try caption instead of title
+}
+
+% HOMEWORK SETTINGS
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries}\hskip \labelsep {\bfseries #2)}]}{\end{trivlist}}
+
+\date{}
+
+% BEGIN DOCUMENT
+
+\begin{document}
+ 
+\title{Cox PH}
+% \author{Florian Rohrer}
+\maketitle
+
+\section{Model Output}
+
+% http://www.ats.ucla.edu/stat/sas/examples/asa2/asa2_sas_ch4.htm
+
+\begin{longtable}[c]{c c c c c c c}
+\caption{Example Model Output} \\
+Variable & Parameter Estimate & Standard Error & Pr $>$ $\chi^2$ & Hazard Ratio & \multicolumn{2}{c}{95\% Conf. Interval} \\
+  & $\beta$  & $\mathit{SE}$ & \textit{p-value}  &  $\mathit{HR}$  &   &  \\
+\specialrule{.1em}{.05em}{.05em}
+age2    &    0.04687          &     0.51864    &          0.9280 &        1.048 &      0.379 &      2.896 \\
+age3    &    0.98560          &     0.44537    &          0.0269 &        2.679 &      1.119 &      6.414 \\
+age4    &    1.26299          &     0.41554    &          0.0024 &        3.536 &      1.566 &      7.984 \\
+\specialrule{0em}{.2em}{.2em}
+
+\specialrule{.1em}{.05em}{.05em}
+% \caption*{Example Model Output}
+\end{longtable}
+
+\begin{longtable}[c]{l c c p{4cm}}
+
+\textbf{Hazard Ratio}: & $\exp(\beta)$ & $e^{0.047} = 1.048 $ & for a (0,1) exposure variable (no interaction) \\
+\specialrule{0em}{.2em}{.2em}
+\textbf{95\% CI for $\bm{\beta}$}: & $\beta \pm 1.96 \cdot \mathit{SE} $ & $ 0.047  \pm 1.96 \cdot 0.519 = [-0.970, 1.063] $ &  \\
+\specialrule{0em}{.2em}{.2em}
+\textbf{95\% CI for $\bm{\mathit{HR}}$}: & $\exp(\beta \pm 1.96 \cdot \mathit{SE})$ & $ [e^{-0.970},e^{1.063}] = [0.379, 2.896] $ &\\
+\end{longtable}
+
+
+\begin{longtable}[l]{l}
+\textbf{Questions} \\
+Do the confidence intervals contain 1? \textit{or} Is the \textit{p-value} significant? \\
+How wide are the confidence intervals? \\
+\end{longtable}
+
+\section{Cox Model Formulas}
+
+\begin{longtable}[l]{l}
+$h(t,\bm{X}) = h_0(t) \exp(\sum_{i=0}^{p} \beta_i X_i)$ where $\bm{X} = (X_1, X_2,...,X_p)$ are the \textit{time-independent} predictors.
+\end{longtable}
+
+\end{document}
