@@ -1,5 +1,5 @@
 
-# Useful latex code
+# Latex
 
 ## Figures
 
