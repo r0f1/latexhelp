@@ -27,13 +27,15 @@
 
 ## Tables
 ```latex
+\usepackage{ctable}
 \usepackage{longtable}
 
 \begin{longtable}[c]{l c c}
 \caption{My caption} \\
 
-bla	 & bla & bla \\
-bla  & bla & bla \\
+bla & bla & bla \\
+\specialrule{.05em}{.3em}{.1em} % {thickness}{upper padding}{lower padding}
+bla & bla & bla \\
 
 \label{tab:baseline} \\
 \caption*{The section for footnotes.}
