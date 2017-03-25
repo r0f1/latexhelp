@@ -4,11 +4,37 @@
 ## Figures
 
 ```latex
+\usepackage{float}
+\usepackage{graphicx}
+
+\graphicspath{{./img/}{./pictures/}}
+
+% regular
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{merging_example}
   \caption{Two collections of records that need to be linked.}
   \label{fig:merging_example}
+\end{figure}
+
+
+% side by side
+\usepackage{caption}
+\usepackage{subcaption}
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{flower1.jpg}
+    \caption{Flower one.}
+    \label{fig:f1}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{flower2.jpg}
+    \caption{Flower two.}
+    \label{fig:f2}
+  \end{subfigure}
+  \caption{My flowers.}
 \end{figure}
 ```
 
@@ -61,8 +87,8 @@ Hello!
 ```latex
 \begin{filecontents}{publication.bib}
 @misc{caesar2017awesome,
-	title={{A}wesome {P}ublic {D}atasets},
-	author={caesar0301},
+	title = {{Awesome Public Datasets}},
+	author = {caesar0301},
 	howpublished = {\url{https://github.com/caesar0301/awesome-public-datasets}},
 	note = {Accessed: 2017-01-27}
 }
