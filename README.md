@@ -92,7 +92,7 @@ Hello!
 	note = {Accessed: 2017-01-27}
 }
 @article{turing1936computable,
-  title={On computable numbers, with an application to the Entscheidungsproblem},
+  title={{On computable numbers, with an application to the Entscheidungsproblem}},
   author={Turing, Alan Mathison},
   journal={J. of Math},
   volume={58},
@@ -104,7 +104,9 @@ Hello!
 \begin{document}
 
 There is a curated list of awesome datasets~\cite{caesar2017awesome}.
-This is a good book page~\cite[p.~16]{turing1936computable} and these are also pages~\cite[pp.~150--153]{turing1936computable}.
+
+This is a good book page~\cite[p.~16]{turing1936computable}. 
+These are also pages~\cite[pp.~150--153]{turing1936computable}.
 
 \bibliographystyle{plain}
 \bibliography{publication}
