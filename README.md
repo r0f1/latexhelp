@@ -90,7 +90,7 @@ Hello!
 	author = {caesar0301},
 	howpublished = {\url{https://github.com/caesar0301/awesome-public-datasets}},
 	note = {Accessed: 2017-01-27}
-}
+},
 @article{turing1936computable,
   title={{On computable numbers, with an application to the Entscheidungsproblem}},
   author={Turing, Alan Mathison},
