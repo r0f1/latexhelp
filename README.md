@@ -81,8 +81,7 @@ In section~\ref{sec:greetings} we will greet you!
 Hello!
 ```
 
-## Citing a Web Resource From Within the Document
-
+## Citing
  
 ```latex
 \begin{filecontents}{publication.bib}
@@ -92,11 +91,20 @@ Hello!
 	howpublished = {\url{https://github.com/caesar0301/awesome-public-datasets}},
 	note = {Accessed: 2017-01-27}
 }
+@article{turing1936computable,
+  title={On computable numbers, with an application to the Entscheidungsproblem},
+  author={Turing, Alan Mathison},
+  journal={J. of Math},
+  volume={58},
+  pages={345--363},
+  year={1936}
+}
 \end{filecontents}
 
 \begin{document}
 
 There is a curated list of awesome datasets~\cite{caesar2017awesome}.
+This is a good book page~\cite[p.~16]{turing1936computable} and these are also pages~\cite[pp.~150--153]{turing1936computable}.
 
 \bibliographystyle{plain}
 \bibliography{publication}
