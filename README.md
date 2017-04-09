@@ -48,6 +48,24 @@
 && Sub item
 && Another sub item
 \end{easylist}
+
+% creating (1) (2) (3) instead
+
+% before \begin{document}
+\newcommand{\mynumbering}[1]{%
+  (#1)%
+}
+% then use the new command
+\begin{easylist}
+\ListProperties(Style*={\mynumbering},
+        Mark={},
+        Numbers1=a,
+        Progressive=1em,
+)
+& First item
+& Second item
+& Third item
+\end{easylist}
 ```
 [Source](https://en.wikibooks.org/wiki/LaTeX/List_Structures#Easylist_package)
 
