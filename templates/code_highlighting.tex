@@ -1,0 +1,33 @@
+\documentclass[10pt]{article}
+
+\usepackage{minted}
+\usemintedstyle{vs}
+
+\begin{document}
+
+% https://de.sharelatex.com/learn/Code_Highlighting_with_minted
+
+\begin{minted}
+[
+fontsize=\footnotesize,
+linenos
+]
+{python}
+import simpy
+
+def example(env):
+    yield env.timeout(10)
+    print("now=%d" % env.now)
+    yield env.timeout(10)
+    print("now=%d" % env.now)
+
+env = simpy.Environment()
+p = env.process(example(env))
+env.run()
+
+# Output:
+# now=10
+# now=20
+\end{minted}
+
+\end{document}
