@@ -1,6 +1,21 @@
 
 # Latex
 
+## Font Sizes
+
+```latex
+\tiny
+\scriptsize
+\footnotesize
+\small
+\normalsize
+\large
+\Large
+\LARGE
+\huge
+\Huge
+```
+
 ## Figures
 
 ```latex
