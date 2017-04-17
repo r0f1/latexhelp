@@ -2,15 +2,30 @@
 
 \usepackage{minted}
 \usemintedstyle{vs}
+\usepackage[many]{tcolorbox}
+
+\newtcolorbox[auto counter,number within=section]{myborder}{
+  breakable,
+  enhanced,
+  colback=white,
+  boxrule=0pt,
+  arc=0pt,
+  outer arc=0pt
+}
+
 
 \begin{document}
 
 % https://de.sharelatex.com/learn/Code_Highlighting_with_minted
-
+\begin{listing}[H]
+\begin{myborder}
 \begin{minted}
 [
-fontsize=\footnotesize,
-linenos
+mathescape,
+framesep=2mm,
+fontsize=\scriptsize,
+linenos,
+numbersep=5pt
 ]
 {python}
 import simpy
@@ -26,8 +41,12 @@ p = env.process(example(env))
 env.run()
 
 # Output:
-# now=10
-# now=20
+# > now=10
+# > now=20
 \end{minted}
+\caption{Example of a listing.}
+\label{lst:simpy_example}
+\end{myborder}
+\end{listing}
 
 \end{document}
