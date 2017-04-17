@@ -1,33 +1,27 @@
 \documentclass[10pt]{article}
 
+\usepackage[width=\textwidth, labelfont=bf]{caption}
+\usepackage{color}
+
 \usepackage{minted}
 \usemintedstyle{vs}
-\usepackage[many]{tcolorbox}
 
-\newtcolorbox[auto counter,number within=section]{myborder}{
-  breakable,
-  enhanced,
-  colback=white,
-  boxrule=0pt,
-  arc=0pt,
-  outer arc=0pt
-}
+\definecolor{codebg}{rgb}{0.98,0.98,0.98}
+\newminted{python}{bgcolor=codebg,
+                    linenos=true,
+                    frame=lines,
+                    numbersep=5pt,
+                    mathescape,
+                    framesep=2mm,
+                    fontsize=\footnotesize}
 
 
 \begin{document}
 
 % https://de.sharelatex.com/learn/Code_Highlighting_with_minted
+
 \begin{listing}[H]
-\begin{myborder}
-\begin{minted}
-[
-mathescape,
-framesep=2mm,
-fontsize=\scriptsize,
-linenos,
-numbersep=5pt
-]
-{python}
+\begin{pythoncode}
 import simpy
 
 def example(env):
@@ -43,10 +37,11 @@ env.run()
 # Output:
 # > now=10
 # > now=20
-\end{minted}
+\end{pythoncode}
 \caption{Example of a listing.}
 \label{lst:simpy_example}
-\end{myborder}
 \end{listing}
+
+Listing~\ref{lst:simpy_example} shows some code.
 
 \end{document}

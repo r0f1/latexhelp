@@ -103,6 +103,15 @@ bla & bla & bla \\
 
 A more complicated table: [tex](https://github.com/r0f1/latexhelp/blob/master/templates/table1.tex) | [pdf](https://github.com/r0f1/latexhelp/blob/master/templates/table1.pdf). 
 
+
+## Code Listings
+```latex
+\usepackage{minted}
+```
+Compile with `--shell-escape`.
+
+See templates: [tex](https://github.com/r0f1/latexhelp/blob/master/templates/code_highlighting.tex) | [pdf](https://github.com/r0f1/latexhelp/blob/master/templates/code_highlighting.pdf) | [makefile](https://github.com/r0f1/latexhelp/blob/master/templates/makefile).
+
 ## Referencing
 
 ```latex
