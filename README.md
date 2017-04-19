@@ -88,6 +88,11 @@
 ```latex
 \usepackage{ctable}
 \usepackage{longtable}
+\usepackage{array}
+
+\newcolumntype{R}[1]{>{\raggedright\arraybackslash}p{#1}} % p=top m=middle b=bottom alignment
+\newcolumntype{L}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 
 \begin{longtable}[c]{l c c}
 \caption{My caption} \\
