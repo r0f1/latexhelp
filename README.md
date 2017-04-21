@@ -113,6 +113,7 @@ A more complicated table: [tex](https://github.com/r0f1/latexhelp/blob/master/te
 ```latex
 \usepackage{minted}
 ```
+Install python package `pygments` first.  
 Compile with `--shell-escape`.
 
 See templates: [tex](https://github.com/r0f1/latexhelp/blob/master/templates/code_highlighting.tex) | [pdf](https://github.com/r0f1/latexhelp/blob/master/templates/code_highlighting.pdf) | [makefile](https://github.com/r0f1/latexhelp/blob/master/templates/makefile).
