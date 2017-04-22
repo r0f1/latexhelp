@@ -56,31 +56,17 @@
 ## Lists
 
 ```latex
-\usepackage[ampersand]{easylist}
+\usepackage[shortlabels]{enumitem}
 
-\begin{easylist}[itemize] % default=enumerate
-& Main item
-&& Sub item
-&& Another sub item
-\end{easylist}
-
-% creating (1) (2) (3) instead
-
-% before \begin{document}
-\newcommand{\mynumbering}[1]{%
-  (#1)%
-}
-% then use the new command
-\begin{easylist}
-\ListProperties(Style*={\mynumbering},
-        Mark={},
-        Numbers1=a,
-        Progressive=1em,
-)
-& First item
-& Second item
-& Third item
-\end{easylist}
+% \arabic* generates numbers 1, 2, 3, 4
+% a generates letters a, b, c, d
+% i generates roman letters i, ii, iii, iv
+\begin{enumerate}[(\arabic*)]
+\item The load is (or will be) very high
+\item The load is (or will be) very low, but greater than zero
+\item The load is (or will be) in an acceptable range
+\item The load is zero
+\end{enumerate}
 ```
 [Source](https://en.wikibooks.org/wiki/LaTeX/List_Structures#Easylist_package)
 
