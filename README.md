@@ -67,6 +67,12 @@
 \item The load is (or will be) in an acceptable range
 \item The load is zero
 \end{enumerate}
+
+% generates bullet points
+\begin{itemize}
+\item ...
+\end{itemize}
+
 ```
 [Source](https://en.wikibooks.org/wiki/LaTeX/List_Structures#Easylist_package)
 
