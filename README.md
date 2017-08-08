@@ -100,6 +100,21 @@ bla & bla & bla \\
 
 A more complicated table: [tex](https://github.com/r0f1/latexhelp/blob/master/templates/table1.tex) | [pdf](https://github.com/r0f1/latexhelp/blob/master/templates/table1.pdf). 
 
+## Algorithm
+Abusing Enumerations for simple algorithms.
+```latex
+\begin{algorithm}[H]
+  \caption{Greedy Assignment of VMs}
+  \begin{enumerate}[(\arabic*)]
+    \item Step 
+    \begin{enumerate}[(\arabic*)]
+      \item Step
+      \item Step
+    \end{enumerate}
+  \end{enumerate}
+  \label{alg:greedy_vm}
+\end{algorithm}
+```
 
 ## Code Listings
 ```latex
