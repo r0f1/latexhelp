@@ -128,7 +128,7 @@ See templates: [tex](https://github.com/r0f1/latexhelp/blob/master/templates/cod
 ## Referencing
 
 ```latex
-In section~\ref{sec:greetings} we will greet you!
+In Section~\ref{sec:greetings} we will greet you!
 
 \section{Greetings}
 \label{sec:greetings}
