@@ -116,6 +116,12 @@ Abusing Enumerations for simple algorithms.
 \end{algorithm}
 ```
 
+## Paragraph
+```latex
+\paragraph{Title} ~\\
+Your text goes here...
+```
+
 ## Code Listings
 ```latex
 \usepackage{minted}
