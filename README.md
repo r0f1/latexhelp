@@ -51,6 +51,22 @@
   \end{subfigure}
   \caption{My flowers.}
 \end{figure}
+
+
+% figures in a grid
+\usepackage{caption}
+\usepackage{subcaption}
+\begin{figure}
+\begin{tabular}{cc}
+\subcaptionbox{caption}{\includegraphics[width=.4\textwidth]{bbo_100_01}} &
+\subcaptionbox{caption}{\includegraphics[width=.4\textwidth]{bbo_100_02}}\\
+\subcaptionbox{caption}{\includegraphics[width=.4\textwidth]{bbo_100_03}} &
+\subcaptionbox{caption}{\includegraphics[width=.4\textwidth]{bbo_100_04}}\\
+\subcaptionbox{caption}{\includegraphics[width=.4\textwidth]{bbo_100_05}} &
+\subcaptionbox{caption}{\includegraphics[width=.4\textwidth]{bbo_100_06}}
+\end{tabular}
+\caption{My caption.}
+\end{figure}
 ```
 
 ## Lists
