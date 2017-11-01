@@ -94,6 +94,23 @@
 
 ## Tables
 ```latex
+\begin{table}
+  \centering
+  \caption{Number of possible solutions.}
+  \resizebox{0.75\columnwidth}{!}{%
+  \begin{tabular}{cccc}
+  \textbf{\# PMs} & \textbf{\# VMs} & \textbf{\# Users} & $|\Sigma|$ \\
+  \specialrule{.05em}{.1em}{.3em} 
+  25 & 25 & 25 & $7.52 \cdot 10^{46}$ \\
+  50 & 50 & 50 & $6.37 \cdot 10^{108}$ \\
+  75 & 75 & 75 & $2.59 \cdot 10^{176}$ \\
+  100 & 100 & 100 & $5.15 \cdot 10^{247}$ \\
+  \end{tabular}%
+  }
+  \label{tab:n_solutions}
+\end{table}
+
+
 \usepackage{ctable}
 \usepackage{longtable}
 \usepackage{array}
